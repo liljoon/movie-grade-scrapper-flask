@@ -12,7 +12,7 @@ def home():
 def search():
     movie = request.args.get('movie')
     get_movie_info_daum(movie)
-    return render_template("search.html", movie_info = get_movie_info_naver(movie))
+    return render_template("search.html", movie_info_naver = get_movie_info_naver(movie),movie_info_daum=get_movie_info_daum(movie))
 
 
 app.run()
